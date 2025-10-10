@@ -60,7 +60,7 @@ def generate_markdown(publications):
 
     # Start with frontmatter
     md = """---
-permalink: /publications
+permalink: /publications/
 title: "Publications"
 author_profile: true
 ---
