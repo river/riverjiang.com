@@ -2,6 +2,9 @@
 permalink: /publications
 title: "Publications"
 author_profile: true
+redirect_from: 
+  - /publications/
+  - /publications.html
 ---
 
 1. Detecting Arrhythmogenic Right Ventricular Cardiomyopathy From the Electrocardiogram Using Deep Learning. Sigfstead S, George CJ, **Jiang R**, Davies B, Ranganathan D, Laksman ZWM, Cadrin-Tourigny J, Tadros R, Khan HR, Atallah J, Steinberg C, Sanatani S, Talajic M, Krishnan RG, Krahn AD, Cheung CC. *JACC Clin Electrophysiol*. 2025. [PMID 40471767](https://pubmed.ncbi.nlm.nih.gov/40471767)

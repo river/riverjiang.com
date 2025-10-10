@@ -13,7 +13,7 @@ title                    : "River Jiang"
 title_separator          : "-"
 name                     : &name "River Jiang"
 description              : &description ""   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : ""
+url                      : "https://riverjiang.com"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "river/riverjiang.com"
 
