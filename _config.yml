@@ -204,7 +204,6 @@ defaults:
       comments: false
       share: false
       related: false
-      permalink: /blog/:year/:title/
   # _pages
   - scope:
       path: ""
