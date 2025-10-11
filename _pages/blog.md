@@ -1,6 +1,5 @@
 ---
 title: "Blog"
-layout: archive
 ---
 
 {% for post in site.posts %}
