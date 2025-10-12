@@ -34,3 +34,7 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+
+# compress html
+compress_html:
+  comments: all
