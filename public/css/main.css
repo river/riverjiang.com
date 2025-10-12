@@ -316,12 +316,6 @@ tbody tr:nth-child(odd) th {
   }
 }
 
-/* Wrapper - Used for sidebar positioning */
-.wrap {
-  position: relative;
-  width: 100%;
-}
-
 /* Masthead - Super small header above the content */
 .masthead {
   padding-top:    1rem;
@@ -359,8 +353,7 @@ nav.navigation {
   align-items: center;
   background: none;
 }
-nav.navigation .nav-item,
-nav.navigation .sidebar-nav-item {
+nav.navigation .nav-item {
   display: inline-block;
   vertical-align: middle;
   margin-right: 1rem;
