@@ -28,7 +28,6 @@ jobs:
     - name: Create directories if needed
       run: |
         mkdir -p _pages
-        mkdir -p data
         
     - name: Fetch publications from PubMed
       run: python .github/scripts/fetch_publications.py

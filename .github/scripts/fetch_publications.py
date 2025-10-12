@@ -63,6 +63,12 @@ def generate_markdown(publications):
 title: "Publications"
 ---
 
+# Publications
+
+<div class="message">
+This list is automatically updated; alternatively, you can see <a href="https://pubmed.ncbi.nlm.nih.gov/?term=River+Jiang%5Bauthor%5D&sort=date&sort_order=desc">live search results directly on PubMed</a>.
+</div>
+
 """
 
     if not publications:
@@ -74,7 +80,7 @@ title: "Publications"
         # Bold "Jiang R" in author list
         authors = pub['authors'].replace('Jiang R', '**Jiang R**')
 
-        md += f"{i}. {pub['title']} {authors}. *{pub['journal']}*. {pub['year']}. [PMID {pub['uid']}]({pub['url']})\n\n"
+        md += f"{i}. {authors}. {pub['title']} *{pub['journal']}*. {pub['year']}. [[PMID {pub['uid']}]]({pub['url']})\n\n"
 
     return md
 

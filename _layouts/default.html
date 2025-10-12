@@ -1,33 +1,27 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+  {% include head.html %}
 
   <body>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          </h3>
+          {% include navigation.html %}
+        </div>
+      </div>
 
-    {{ content }}
-
-    {% comment %}
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+      <div class="container content">
+        {{ content }}
+      </div>
     </div>
-    {% endcomment %}
 
-    {% include scripts.html %}
-
+    <script src='{{ site.baseurl }}/public/js/script.js'></script>
   </body>
 </html>
