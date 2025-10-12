@@ -1,0 +1,438 @@
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* CSS Custom Properties for theming */
+:root {
+  /* Light theme colors */
+  --bg-color: #fff;
+  --text-color: #515151;
+  --heading-color: #313131;
+  --link-color: #268bd2;
+  --link-hover-color: #268bd2;
+  --border-color: #e5e5e5;
+  --border-light-color: #eee;
+  --border-dark-color: #fff;
+  --code-bg-color: #f9f9f9;
+  --code-color: #bf616a;
+  --pre-bg-color: #f9f9f9;
+  --blockquote-color: #7a7a7a;
+  --blockquote-border-color: #e5e5e5;
+  --table-border-color: #e5e5e5;
+  --table-stripe-color: #f9f9f9;
+  --message-bg-color: #f9f9f9;
+  --message-color: #717171;
+  --masthead-title-color: #505050;
+  --masthead-subtitle-color: #c0c0c0;
+  --post-title-color: #303030;
+  --post-date-color: #9a9a9a;
+  --related-border-color: #eee;
+  --related-title-color: #999;
+  --pagination-color: #ccc;
+  --pagination-border-color: #eee;
+  --pagination-hover-bg-color: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme colors */
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --heading-color: #f0f0f0;
+    --link-color: #6bb6ff;
+    --link-hover-color: #85c5ff;
+    --border-color: #404040;
+    --border-light-color: #333;
+    --border-dark-color: #555;
+    --code-bg-color: #2a2a2a;
+    --code-color: #ff8c8c;
+    --pre-bg-color: #2a2a2a;
+    --blockquote-color: #b0b0b0;
+    --blockquote-border-color: #404040;
+    --table-border-color: #404040;
+    --table-stripe-color: #252525;
+    --message-bg-color: #252525;
+    --message-color: #b0b0b0;
+    --masthead-title-color: #e0e0e0;
+    --masthead-subtitle-color: #888;
+    --post-title-color: #f5f5f5;
+    --post-date-color: #888;
+    --related-border-color: #333;
+    --related-title-color: #777;
+    --pagination-color: #666;
+    --pagination-border-color: #333;
+    --pagination-hover-bg-color: #2a2a2a;
+  }
+}
+
+/* Global styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent scroll on narrow devices */
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: var(--heading-color);
+  letter-spacing: -.025rem;
+  margin-bottom: .5rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--post-title-color);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a strong {
+  color: inherit;
+}
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
+/* Utilities */
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border-light-color);
+  border-bottom: 1px solid var(--border-dark-color);
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+/* Media Elements */
+
+/* Code */
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: var(--code-color);
+  background-color: var(--code-bg-color);
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: var(--pre-bg-color);
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: var(--blockquote-color);
+  border-left: .25rem solid var(--blockquote-border-color);
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid var(--table-border-color);
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid var(--table-border-color);
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--table-stripe-color);
+}
+
+
+/* Layout Components */
+
+/* Container - Center the page content */
+.container {
+  max-width: 28rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+/* Wrapper - Used for sidebar positioning */
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* Masthead - Super small header above the content */
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light-color);
+}
+
+.masthead > .container {
+  display: flex;
+  align-items: center;
+}
+
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--masthead-title-color);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+.masthead-title a {
+  color: var(--masthead-title-color);
+}
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: var(--masthead-subtitle-color);
+  letter-spacing: 0;
+}
+
+nav.navigation {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  background: none;
+}
+nav.navigation .nav-item,
+nav.navigation .sidebar-nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  color: var(--masthead-subtitle-color);
+}
+nav.navigation a.active {
+  color: var(--masthead-title-color);
+}
+
+
+/* Content Components */
+
+/* Posts and pages */
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: var(--post-title-color);
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: var(--post-date-color);
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--related-border-color);
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: var(--related-title-color);
+}
+.related-posts li a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+/* Messages */
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--message-color);
+  background-color: var(--message-bg-color);
+}
+
+/* Custom type */
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
