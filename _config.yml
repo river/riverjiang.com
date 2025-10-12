@@ -1,13 +1,15 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# Site configuration - defines the site title, URL, and base URL
+# change the baseurl if you're deploying to a subdirectory
 title:               River Jiang
-description:         ''
 url:                 https://riverjiang.com
 baseurl:             ''
 permalink:           /:year/:title/
 
-# Collections
+# Page collections - defines a "pages" collection that processes markdown files
+# from the _pages/ directory into web pages with clean URLs like /about/ and /publications/
 collections:
   pages:
     output: true
@@ -20,14 +22,9 @@ defaults:
     values:
       layout: page
 
-# About/contact
+# About/contact (used in xml feed)
 author:
   name:              River Jiang
-  url:               https://riverjiang.com
-
-# Gems
-# plugins:
-#   - jekyll-paginate
 
 # Exclude from processing.
 exclude:
