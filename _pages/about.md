@@ -8,7 +8,6 @@ permalink: /
 <div class="social-links">
     <a href="https://github.com/river" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/riverjiang/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-    <a href="https://twitter.com/riverjiang" target="_blank" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
 </div>
 
 <style>
